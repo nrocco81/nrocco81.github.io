@@ -89,7 +89,6 @@
                  </td>
               </tr>
           </table>
-
            <!--disable, show, hide buttons and click counters-->
           <input type="checkbox" ng-model="disableButton"> Disable the Button
           <button ng-disable="disableButton">If checked my clicks don't work</button>
@@ -102,9 +101,9 @@
           <br>
           <p>Total click(s): {{ clickCounter }}</p>
           <button ng-click = "clickCounter = clickCounter + 1">Click Me to Count!</button>
+          <div ng-include = "'seperatePage.htm'"></div> <!--including other html page files-->
+          <div ng-include = "'anotherPage.htm'"></div> <!--including other html page files-->
         </form>
-         <div ng-include = "'seperatePage.htm'"></div> <!--including other html page files-->
-         <div ng-include = "'anotherPage.htm'"></div> <!--including other html page files-->
       </div>
 
    </body>
