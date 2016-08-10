@@ -25,8 +25,8 @@ mainApp.controller('projectController', function($scope) {
      $scope.project.month = 1;
    }
    $scope.student = {
-      firstName: "Mahesh",
-      lastName: "Parashar",
+      firstName: "Nick",
+      lastName: "Rocco",
       fees:500,
       
       subjects:[
