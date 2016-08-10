@@ -27,6 +27,8 @@
       <h2>AngularJS Program Management Application</h2>
 
       <div ng-app = "mainApp" ng-controller = "projectController"> <!--Starts and AngularJS Application-->
+         <div ng-include = "'Topics.htm'"></div> <!--including other html page files-->
+         <div ng-include = "'subjects.htm'"></div> <!--including other html page files-->
         <form name = "projectForm" novalidate>
           <button ng-click="reset()">Reset</button> <!--Creates a reset button tied to reset function-->
           <button ng-click="submit()" ng-disabled = "projectForm.jobnumber.$dirty && projectForm.jobnumber.$invalid">Submit</button> <!--Creates a submit button and disables it if invalid input text box jobnumber-->
