@@ -34,7 +34,7 @@ mainApp.controller('projectController', function($scope) {
          {name:'Chemistry',marks:80},
          {name:'Math',marks:65},
          {name:'English',marks:75},
-         {name:'Hindi',marks:67}
+         {name:'Spanish',marks:67}
       ],
       fullName: function() {
          var studentObject;
