@@ -1,4 +1,4 @@
-<p>Seperate Page:</p>
+<p>Seperate Page:</p> <!--linking to students in projectController.js-->
 <table border = "0">
    <tr>
       <td>Enter first name:</td>
@@ -14,4 +14,15 @@
       <td>Name: </td>
       <td>{{student.fullName()}}</td>
    </tr>
-</table>
+   
+   <tr> 
+      <th>Name</th> 
+      <th>Marks</th> 
+   </tr> 
+   
+   <tr ng-repeat = "subject in student.subjects"> 
+      <td>{{ subject.name }}</td> 
+      <td>{{ subject.marks }}</td> 
+   </tr> 
+</table> 
+
