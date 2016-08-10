@@ -30,11 +30,11 @@ mainApp.controller('projectController', function($scope) {
       lastName: "Rocco",
       fees:500,
       subjects:[
-         {name:'Physics',marks:70},
-         {name:'Chemistry',marks:80},
-         {name:'Math',marks:65},
-         {name:'English',marks:75},
-         {name:'Spanish',marks:67}
+         {name:'Physics',grades:70},
+         {name:'Chemistry',grades:80},
+         {name:'Math',grades:65},
+         {name:'English',grades:75},
+         {name:'Spanish',grades:67}
       ],
       fullName: function() {
          var studentObject;
