@@ -30,7 +30,7 @@
                <th>Percentage</th>
             </tr>
          
-            <tr ng-repeat = "data in students">
+            <tr ng-repeat = "data in datas">
                <td>{{ data.Name }}</td>
                <td>{{ data.RollNo }}</td>
                <td>{{ data.Percentage }}</td>
@@ -43,7 +43,7 @@
             var url = "https://api.myjson.com/bins/59jyp";
          
             $http.get(url).success( function(response) {
-               $scope.students = response;
+               $scope.datas = response;
             });
          }
       </script>
