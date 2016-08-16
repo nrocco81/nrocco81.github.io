@@ -30,7 +30,7 @@
                <th>Percentage</th>
             </tr>
          
-            <tr ng-repeat = "data in data">
+            <tr ng-repeat = "data in dataTable">
                <td>{{ data.Name }}</td>
                <td>{{ data.RollNo }}</td>
                <td>{{ data.Percentage }}</td>
@@ -43,7 +43,7 @@
             var url = "data.txt";
          
             $http.get(url).success( function(response) {
-               $scope.data = response;
+               $scope.dataTable = response;
             });
          }
       </script>
