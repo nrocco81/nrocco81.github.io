@@ -43,4 +43,10 @@ mainApp.controller('projectController', function($scope) {
       }
    };
    
+    $scope.data = {         //sets up default values
+      Name: "[Name]",
+      RollNo: "[RollNo]",
+      Percentage: 100,
+   };
+   
 });
