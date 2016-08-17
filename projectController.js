@@ -42,11 +42,5 @@ mainApp.controller('projectController', function($scope) {
          return studentObject.firstName + " " + studentObject.lastName;
       }
    };
-   
-    $scope.datas = {         //sets up default values
-      Name: "[Name]",
-      RollNo: "[RollNo]",
-      Percentage: 100,
-   };
-   
+
 });
