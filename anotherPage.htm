@@ -40,7 +40,7 @@
       
       <script>
          function projectController($scope,$http) {
-            var url = "data.txt";
+            var url = "https://github.com/nrocco81/nrocco81.github.io/data.txt";
          
             $http.get(url).success( function(response) {
                $scope.datas = response;
