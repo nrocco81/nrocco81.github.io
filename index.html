@@ -107,5 +107,33 @@
         </form>
       </div>
 
+      <h2>AngularJS Sample Application</h2>
+      <div ng-app = "" ng-controller = "dataController">
+      
+         <table>
+            <tr>
+               <th>Name</th>
+               <th>Roll No</th>
+               <th>Percentage</th>
+            </tr>
+         
+            <tr ng-repeat = "data in datas">
+               <td>{{ data.Name }}</td>
+               <td>{{ data.RollNo }}</td>
+               <td>{{ data.Percentage }}</td>
+            </tr>
+         </table>
+      </div>
+      
+      <script>
+         function dataController($scope,$http) {
+            var url = "data.txt";
+         
+            $http.get(url).success( function(response) {
+               $scope.datas = response;
+            });
+         }
+      </script>
+
    </body>
 </html>
