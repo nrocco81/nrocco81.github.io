@@ -24,8 +24,37 @@
 
    </head>
    <body>
-      <h2>AngularJS Program Management Application</h2>
 
+      <h2>AngularJS Sample Application</h2>
+      <div ng-app = "" ng-controller = "dataController">
+      
+         <table>
+            <tr>
+               <th>Name</th>
+               <th>Roll No</th>
+               <th>Percentage</th>
+            </tr>
+         
+            <tr ng-repeat = "data in datas">
+               <td>{{ data.Name }}</td>
+               <td>{{ data.RollNo }}</td>
+               <td>{{ data.Percentage }}</td>
+            </tr>
+         </table>
+      </div>
+      
+      <script>
+         function dataController($scope,$http) {
+            var url = "data.txt";
+         
+            $http.get(url).success( function(response) {
+               $scope.datas = response;
+            });
+         }
+      </script>
+      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+      <h2>AngularJS Program Management Application</h2>
       <div ng-app = "mainApp" ng-controller = "projectController"> <!--Starts and AngularJS Application-->
         <form name = "projectForm" novalidate>
           <button ng-click="reset()">Reset</button> <!--Creates a reset button tied to reset function-->
@@ -105,35 +134,6 @@
           <!--<div ng-include = "'anotherPage.html'"></div> -->
         </form>
       </div>
-
-      <h2>AngularJS Sample Application</h2>
-      <div ng-app = "" ng-controller = "dataController">
-      
-         <table>
-            <tr>
-               <th>Name</th>
-               <th>Roll No</th>
-               <th>Percentage</th>
-            </tr>
-         
-            <tr ng-repeat = "data in datas">
-               <td>{{ data.Name }}</td>
-               <td>{{ data.RollNo }}</td>
-               <td>{{ data.Percentage }}</td>
-            </tr>
-         </table>
-      </div>
-      
-      <script>
-         function dataController($scope,$http) {
-            var url = "data.txt";
-         
-            $http.get(url).success( function(response) {
-               $scope.datas = response;
-            });
-         }
-      </script>
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 
    </body>
 </html>
