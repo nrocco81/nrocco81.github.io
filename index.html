@@ -25,10 +25,10 @@
    </head>
    <body>
 
-      <h2>AngularJS Sample Application</h2>
-      <div ng-app = "" ng-controller = "dataController">
-      
-         <table>
+      <h2>AngularJS Program Management Application</h2>
+      <div ng-app = "mainApp" ng-controller = "projectController"> <!--Starts and AngularJS Application-->
+        
+          <table>
             <tr>
                <th>Name</th>
                <th>Roll No</th>
@@ -41,7 +41,7 @@
                <td>{{ data.Percentage }}</td>
             </tr>
          </table>
-      </div>
+
       
       <script>
          function dataController($scope,$http) {
@@ -53,9 +53,7 @@
          }
       </script>
       <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-
-      <h2>AngularJS Program Management Application</h2>
-      <div ng-app = "mainApp" ng-controller = "projectController"> <!--Starts and AngularJS Application-->
+        
         <form name = "projectForm" novalidate>
           <button ng-click="reset()">Reset</button> <!--Creates a reset button tied to reset function-->
           <button ng-click="submit()" ng-disabled = "projectForm.jobnumber.$dirty && projectForm.jobnumber.$invalid">Submit</button> <!--Creates a submit button and disables it if invalid input text box jobnumber-->
