@@ -1,5 +1,9 @@
-mainApp.controller('projectController', function($scope) {
-   
+mainApp.controller('projectController', function($scope, $http) {
+   var url = "data.txt"; 
+       $http.get(url).success( function(response) { 
+          $scope.datas = response; 
+       }); 
+
    $scope.project = {         //sets up default values
       jobNumber: "[Job#]",
       description: "[Description]",
