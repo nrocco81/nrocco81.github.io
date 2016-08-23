@@ -27,33 +27,7 @@
 
       <h2>AngularJS Program Management Application</h2>
       <div ng-app = "mainApp" ng-controller = "projectController"> <!--Starts and AngularJS Application-->
-        
-          <table>
-            <tr>
-               <th>Name</th>
-               <th>Roll No</th>
-               <th>Percentage</th>
-            </tr>
-         
-            <tr ng-repeat = "data in datas">
-               <td>{{ data.Name }}</td>
-               <td>{{ data.RollNo }}</td>
-               <td>{{ data.Percentage }}</td>
-            </tr>
-         </table>
-
-      
-      <script>
-         function dataController($scope,$http) {
-            var url = "data.txt";
-         
-            $http.get(url).success( function(response) {
-               $scope.datas = response;
-            });
-         }
-      </script>
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-        
+  
         <form name = "projectForm" novalidate>
           <button ng-click="reset()">Reset</button> <!--Creates a reset button tied to reset function-->
           <button ng-click="submit()" ng-disabled = "projectForm.jobnumber.$dirty && projectForm.jobnumber.$invalid">Submit</button> <!--Creates a submit button and disables it if invalid input text box jobnumber-->
