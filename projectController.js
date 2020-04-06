@@ -23,7 +23,7 @@ mainApp.controller('projectController', function($scope) {
      $scope.project.description = "[Description]";
      $scope.project.value = 500;
      $scope.project.month = 1;
-   }
+   }; //MAY NEED TO REMOVE ';'//
    
    $scope.student = {
       firstName: "Nick",
@@ -41,6 +41,15 @@ mainApp.controller('projectController', function($scope) {
          studentObject = $scope.student;
          return studentObject.firstName + " " + studentObject.lastName;
       }
+   };
+
+   $scope.kid = {//from another page//
+      Name: "Default Name"
+      RollNo: "Default RollNo"
+      Percentage: "Default %"
+      score:[
+         {Name: '', RollNo: '', Percentage: '' }
+      ]
    };
 
 });
