@@ -42,14 +42,4 @@ mainApp.controller('projectController', function($scope) {
          return studentObject.firstName + " " + studentObject.lastName;
       }
    };
-
-   $scope.kid = {//from another page//
-      Name: "Default Name"
-      RollNo: "Default RollNo"
-      Percentage: "Default %"
-      score:[
-         {Name: '', RollNo: '', Percentage: '' }
-      ]
-   };
-
 });
